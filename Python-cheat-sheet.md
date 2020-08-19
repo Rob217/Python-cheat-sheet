@@ -23,6 +23,21 @@ pathname = os.path.join('dir1', 'dir2', 'filename')
 # Windows: dir1\dir2\filename
 ```
 
+#### Executing in terminal
+To run ```script.py``` you can use the following terminal command:
+```bash
+python script.py
+```
+However, if you want to run it as an executable file without calling the ```python``` command, just add the following text to the head of ```script.py```:
+```python
+#!/usr/bin/env python
+# coding: utf-8
+```
+Then you can run the script using
+```bash
+./script.py
+```
+
 
 ## NumPy
 ```python
@@ -61,4 +76,10 @@ Here are some useful rcParams to remember:
 ```python
 import maptlotlib as mpl
 mpl.rcParams['figure.dpi'] = 200
+```
+
+#### Colorbars
+```python
+c_bar = plt.colorbar()
+c_bar.set_label('colorbar label')
 ```
