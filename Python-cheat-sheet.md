@@ -35,11 +35,11 @@ Use ```np.moveaxis()``` to exchange dimensions.
 ```python
 >>> A = np.ones([2, 3])
 >>> B = np.tile(A, [4, 5, 1, 1])
->>> B.shape()
-[4, 5, 2, 3]
+>>> B.shape
+(4, 5, 2, 3)
 >>> C = np.moveaxis(B, [0, 1, 2, 3], [2, 3, 0, 1])
->>> C.shape()
-[2, 3, 4, 5]
+>>> C.shape
+(2, 3, 4, 5)
 ```
 
 
