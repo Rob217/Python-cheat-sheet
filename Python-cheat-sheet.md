@@ -38,6 +38,50 @@ Then you can run the script using
 ./script.py
 ```
 
+#### Packages
+Useful resources:
+- https://packaging.python.org/tutorials/packaging-projects/
+- https://kiwidamien.github.io/making-a-python-package.html
+- https://medium.com/@joel.barmettler/how-to-upload-your-python-package-to-pypi-65edc5fe9c56
+
+Load package from inside directory:
+```bash
+python -m pip install .
+```
+
+Reload package (e.g., if made edits):
+```bash
+python -m pip install --upgrade --force-reinstall ..
+```
+
+## Virtual environments
+Useful resources:
+- https://packaging.python.org/tutorials/installing-packages/
+- https://www.youtube.com/watch?v=N5vscPTWKOk
+
+Steps for creating and using a virtual environment:
+1. Create a directory in which your virtual environment is going to be stored, e.g., ```test_env_dir```
+```bash
+> mkdir test_env_dir
+> cd test_env_dir
+```
+2. Inside that directory, create a new virtual environment using the ```virtualenv``` package
+```bash
+> python -m virtualenv test_env
+```
+3. Activate this new environment
+```bash
+> test_env/Scripts/activate
+```
+4. Notice now that `[test_env]` is at the start of the command line indicating you are in the new environment and can load and install Python packages as required.
+```bash
+(test_env) >
+```
+5. To exit the virtual environment type:
+```bash
+(test_env) > deactivate
+```
+
 
 ## NumPy
 ```python
@@ -82,4 +126,11 @@ mpl.rcParams['figure.dpi'] = 200
 ```python
 c_bar = plt.colorbar()
 c_bar.set_label('colorbar label')
+```
+
+#### Get line parameters, e.g., color
+```python
+>>> line, = ax.plot(x, y, color='r')
+>>> line.get_color()
+'r'
 ```
