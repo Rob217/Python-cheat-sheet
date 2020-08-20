@@ -104,6 +104,11 @@ Use ```np.moveaxis()``` to exchange dimensions.
 
 ## Matplotlib
 
+```python
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+```
+
 #### Nice figures
 Loads and uses the functions and style sheets defined in the package [nice-figures](https://github.com/Rob217/nice-figures)
 ```python
@@ -118,7 +123,6 @@ add_border() # add border to figure
 #### Useful rcParams
 Here are some useful rcParams to remember:
 ```python
-import maptlotlib as mpl
 mpl.rcParams['figure.dpi'] = 200
 ```
 
@@ -134,3 +138,11 @@ c_bar.set_label('colorbar label')
 >>> line.get_color()
 'r'
 ```
+
+#### Figure title with subplots
+E.g., https://matplotlib.org/gallery/images_contours_and_fields/image_nonuniform.html#sphx-glr-gallery-images-contours-and-fields-image-nonuniform-py
+```python
+fig, axs = plt.sublots(2, 2, constrained_layout=True)
+fig.suptitle('Figure title')
+```
+Note that it is important to set ```constrained_layout=True``` otherwise title may overlap with subplots.
