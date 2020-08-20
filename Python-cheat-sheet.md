@@ -2,7 +2,13 @@
 
 This post is a collection of Python commands and recipes that I have found useful. This is an open post and I will keep updating it with new items.
 
-## Misc Python
+# Table of contents
+1. [Misc Python](#MiscPython)
+2. [Virtual Environments](#VirtualEnvironments)
+3. [NumPy](#NumPy)
+4. [Matplotlib](#Matplotlib)
+
+## Misc Python <a name="MiscPython"></a>
 
 #### Timer
 
@@ -54,7 +60,7 @@ Reload package (e.g., if made edits):
 python -m pip install --upgrade --force-reinstall ..
 ```
 
-## Virtual environments
+## Virtual environments <a name="VirtualEnvironments"></a>
 Useful resources:
 - https://packaging.python.org/tutorials/installing-packages/
 - https://www.youtube.com/watch?v=N5vscPTWKOk
@@ -83,7 +89,7 @@ Steps for creating and using a virtual environment:
 ```
 
 
-## NumPy
+## NumPy <a name="NumPy"></a>
 ```python
 import numpy as np
 ```
@@ -102,7 +108,7 @@ Use ```np.moveaxis()``` to exchange dimensions.
 ```
 
 
-## Matplotlib
+## Matplotlib <a name="Matplotlib"></a>
 
 ```python
 import matplotlib as mpl
