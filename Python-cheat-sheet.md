@@ -168,3 +168,10 @@ fig, axs = plt.sublots(2, 2, constrained_layout=True)
 fig.suptitle('Figure title')
 ```
 Note that it is important to set ```constrained_layout=True``` otherwise title may overlap with subplots.
+
+#### Stacking order of plots
+Use ```zorder``` to control which lines appear on top of which, with ```z<0``` appearing behind ```z>0```, e.g.,
+```python
+ax.plot(x, y, zorder = 10) # appears in front
+ax.plot(x, y, zorder = -5) # appears behind
+```
