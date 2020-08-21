@@ -107,6 +107,22 @@ Use ```np.moveaxis()``` to exchange dimensions.
 (2, 3, 4, 5)
 ```
 
+#### Slicing ndarrays without losing dimensions
+The following index slice ends up losing dimensions
+```python
+>>> a = np.ones([5, 4, 1])
+>>> b = a[:, 0, :]
+>>> b.shape
+(4, 1)
+```
+To keep the same dimension structure, use this instead:
+```python
+>>> c = a[:, [0], :]
+>>> c.shape
+(4, 1, 1)
+```
+This might occur if assigning one array to another with a variable dimension size which sometimes may be 1.
+
 
 ## Matplotlib <a name="Matplotlib"></a>
 
