@@ -154,11 +154,20 @@ c_bar = plt.colorbar()
 c_bar.set_label('colorbar label')
 ```
 
-#### Get line parameters, e.g., color
+#### Get and set object attributes (e.g., color, ...)
+Use ```plt.getp(object_handle)``` and ```plt.setp(object_handle)``` (see [here](https://matplotlib.org/3.1.0/gallery/misc/set_and_get.html))
 ```python
 >>> line, = ax.plot(x, y, color='r')
->>> line.get_color()
+>>> plt.getp(line) # lists all available attributes
+agg_filter = None
+alpha = None
+animated = False
+...
+>>> plt.getp(line, 'color') # get color attribute
 'r'
+>>> plt.setp(line, color='b', linewidth=2) # set color and linewidth
+>>> line.get_color() # sometime specific functions exist for getting specific attributes
+'b'
 ```
 
 #### Figure title with subplots
