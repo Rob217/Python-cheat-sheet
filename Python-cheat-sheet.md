@@ -121,7 +121,7 @@ To keep the same dimension structure, use this instead:
 >>> c.shape
 (4, 1, 1)
 ```
-This might occur if assigning one array to another with a variable dimension size which sometimes may be 1.
+This might occur if assigning one array to another with a variable dimension size which may be 1.
 
 
 ## Matplotlib <a name="Matplotlib"></a>
