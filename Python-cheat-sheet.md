@@ -108,7 +108,7 @@ Use ```np.moveaxis()``` to exchange dimensions.
 ```
 
 #### Slicing ndarrays without losing dimensions
-The following index slice ends up losing dimensions
+The following index slice loses a dimension from the ndarray:
 ```python
 >>> a = np.ones([5, 4, 1])
 >>> b = a[:, 0, :]
