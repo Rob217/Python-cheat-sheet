@@ -127,10 +127,11 @@ This might occur if assigning one array to another with a variable dimension siz
 See https://numpy.org/doc/stable/reference/random/index.html?highlight=random#module-numpy.random for updated methods
 ```python
 from numpy.random import default_rng
-rng = default_rng()
+rng = default_rng(5)
 vals = rng.standard_normal(10) # standard deviation with shape (10,)
 vals = rng.random((10, 2, 4)) # uniform distribution with shape (10, 2, 4)
 ```
+`default_rng(n)` initialized the seed using the integer n, ensuring reproducability. If left blank, will initialize with random seed.
 
 ## Matplotlib <a name="Matplotlib"></a>
 
