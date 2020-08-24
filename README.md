@@ -1,5 +1,3 @@
 # Python-cheat-sheet
 
-A series of useful Python commands and recipes.
-
-I will continually add more items as I find them.
+A collection of Python recipes and commands that I have found useful and want to remember.
