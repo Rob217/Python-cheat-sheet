@@ -123,6 +123,14 @@ To keep the same dimension structure, use this instead:
 ```
 This might occur if assigning one array to another with a variable dimension size which may be 1.
 
+#### Random numbers
+See https://numpy.org/doc/stable/reference/random/index.html?highlight=random#module-numpy.random for updated methods
+```python
+from numpy.random import default_rng
+rng = default_rng()
+vals = rng.standard_normal(10) # standard deviation with shape (10,)
+vals = rng.random((10, 2, 4)) # uniform distribution with shape (10, 2, 4)
+```
 
 ## Matplotlib <a name="Matplotlib"></a>
 
