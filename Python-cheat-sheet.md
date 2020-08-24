@@ -60,7 +60,7 @@ Reload package (e.g., if made edits):
 python -m pip install --upgrade --force-reinstall ..
 ```
 
-#### Save data (json)
+#### Save/load data (json)
 Note that this does not work for np.ndarrays - for those see NumPy section.
 ```python
 import json
@@ -149,6 +149,23 @@ vals = rng.standard_normal(10) # standard deviation with shape (10,)
 vals = rng.random((10, 2, 4)) # uniform distribution with shape (10, 2, 4)
 ```
 `default_rng(n)` initialized the seed using the integer n, ensuring reproducability. If left blank, will initialize with random seed.
+
+#### Save/load data (csv)
+If want to read in other programmes and np.ndarray has at most two dimensions, can save as csv:
+```python
+data = np.array([1, 2, 3, 4])
+np.savetxt('data.csv', data, delimiter=',') # save
+data = np.loadtxt('data.csv', delimiter=',') # load
+```
+
+#### Save/load data (npy)
+If np.ndarray has more than two dimensions and will only be loading in Python, use `np.save()`:
+```python
+data = np.ones([3, 4, 5])
+np.save('data.npy', data)
+data = np.load('data.npy')
+```
+
 
 ## Matplotlib <a name="Matplotlib"></a>
 
