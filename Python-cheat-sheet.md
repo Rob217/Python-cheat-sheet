@@ -60,6 +60,23 @@ Reload package (e.g., if made edits):
 python -m pip install --upgrade --force-reinstall ..
 ```
 
+#### Save data (json)
+Note that this does not work for np.ndarrays - for those see NumPy section.
+```python
+import json
+data = {'a' : [1, 2, 3], 'b' : ('hello', 'world')} # dictionary
+
+# save
+with open('data.json', 'w') as outfile:
+  json.dump(data, outfile)
+  
+# load
+with open('data.json', 'r') as infile:
+  data = json.load(infile)
+```
+
+
+
 ## Virtual environments <a name="VirtualEnvironments"></a>
 Useful resources:
 - https://packaging.python.org/tutorials/installing-packages/
