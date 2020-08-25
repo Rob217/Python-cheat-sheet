@@ -28,3 +28,18 @@ df.to_csv('data.csv')
 4
 7
 ```
+
+#### Add new column to dataframe
+```python
+df['new_col'] = '' # empty column
+df['new_col'] = val # fill with some value
+df['new_col'] = [1, 2, 3] # fill with list
+df.insert(loc, col_name, vals, allow_duplicates) # add a new column in location loc with name col_name and values vals
+```
+`allow_duplicates` is a boolean which allows `col_name` to be the same as an already existing column name or not.
+
+#### Size of dataframe
+```python
+df.shape # (2, 3)
+len(df.index) # number of rows
+```
