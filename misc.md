@@ -64,3 +64,12 @@ with open('data.json', 'w') as outfile:
 with open('data.json', 'r') as infile:
   data = json.load(infile)
 ```
+
+#### Find n smallest/largest elements
+Use [heaps](https://docs.python.org/3/library/heapq.html):
+```python 
+import heapq
+a = [4, 6, 2, 3, 7]
+heapq.nsmallest(3, a) # [2, 3, 4]
+heapq.nlargest(3, a) # [7, 6, 4]
+```
