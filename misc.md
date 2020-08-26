@@ -87,7 +87,7 @@ Check Jupyter notebook:
 ```Shell
 pip install flake8 pycodestyle_magic
 ```
-2. Inside notebook cell:
+2. Inside notebook cell (see [pycodestyle_magic notes](https://github.com/mattijn/pycodestyle_magic):
 ```Jupyter Notebook
 %load_ext pycodestyle_magic
 %pycodestyle_on
