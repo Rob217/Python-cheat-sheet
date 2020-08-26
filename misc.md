@@ -21,7 +21,7 @@ pathname = os.path.join('dir1', 'dir2', 'filename')
 
 #### Executing in terminal
 To run ```script.py``` you can use the following terminal command:
-```bash
+```Shell
 python script.py
 ```
 However, if you want to run it as an executable file without calling the ```python``` command, just add the following text to the head of ```script.py```:
@@ -30,7 +30,7 @@ However, if you want to run it as an executable file without calling the ```pyth
 # coding: utf-8
 ```
 Then you can run the script using
-```bash
+```Shell
 ./script.py
 ```
 
@@ -41,12 +41,12 @@ Useful resources:
 - https://medium.com/@joel.barmettler/how-to-upload-your-python-package-to-pypi-65edc5fe9c56
 
 Load package from inside directory:
-```bash
+```Shell
 python -m pip install .
 ```
 
 Reload package (e.g., if made edits):
-```bash
+```Shell
 python -m pip install --upgrade --force-reinstall ..
 ```
 
@@ -72,4 +72,24 @@ import heapq
 a = [4, 6, 2, 3, 7]
 heapq.nsmallest(3, a) # [2, 3, 4]
 heapq.nlargest(3, a) # [7, 6, 4]
+```
+
+#### PEP8 coding style
+To check code against the [PEP8 style guidelines](https://www.python.org/dev/peps/pep-0008/#blank-lines) can use the [`pycodestyle`](https://pypi.org/project/pycodestyle/) or [`flake8`](https://pypi.org/project/flake8/) modules (see links for installation).
+
+Check python script:
+```Shell
+pycodestyle --first script.py
+```
+
+Check Jupyter notebook:
+1. Install pycodestyle_magic
+```Shell
+pip install flake8 pycodestyle_magic
+```
+2. Inside notebook cell:
+```Jupyter Notebook
+%load_ext pycodestyle_magic
+%pycodestyle_on
+%pycodestyle_off
 ```
