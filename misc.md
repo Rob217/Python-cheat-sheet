@@ -51,7 +51,7 @@ python -m pip install --upgrade --force-reinstall ..
 ```
 
 #### Save/load data (json)
-Note that this does not work for np.ndarrays - for those see NumPy section.
+Note that this does not work for np.ndarrays - for those see NumPy section or pickle (below).
 ```python
 import json
 data = {'a' : [1, 2, 3], 'b' : ('hello', 'world')} # dictionary
@@ -63,6 +63,14 @@ with open('data.json', 'w') as outfile:
 # load
 with open('data.json', 'r') as infile:
   data = json.load(infile)
+```
+
+#### Save/load data (pickle)
+Can save dictionary of np.ndarrays using [pickle](https://wiki.python.org/moin/UsingPickle).
+```python
+import pickle
+pickle.dump(dict_name, open("save.p", "wb"))
+dict_name = pickle.load(open("save.p", "rb"))
 ```
 
 #### Find n smallest/largest elements
