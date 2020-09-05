@@ -1,6 +1,8 @@
 # Miscellaneous
 
-#### Timer
+#### Benchmarking
+
+1. Custom timer
 
 ```python
 import time
@@ -9,6 +11,20 @@ t0 = get_time()
 ### some code ###
 t1 = get_time()
 print('Time elapsed = {}'.format(t1 - t0))
+```
+
+2. Timeit module (example taken from [here](https://www.blog.pythonlibrary.org/2016/05/24/python-101-an-intro-to-benchmarking-your-code/))
+```python
+def my_function():
+    try:
+        1 / 0
+    except ZeroDivisionError:
+        pass
+ 
+if __name__ == "__main__":
+    import timeit
+    setup = "from __main__ import my_function"
+    print timeit.timeit("my_function()", setup=setup)
 ```
 
 #### Path names
