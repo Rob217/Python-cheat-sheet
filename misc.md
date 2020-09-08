@@ -99,7 +99,7 @@ heapq.nlargest(3, a) # [7, 6, 4]
 ```
 
 #### PEP8 coding style
-To check code against the [PEP8 style guidelines](https://www.python.org/dev/peps/pep-0008/#blank-lines) can use the [`pycodestyle`](https://pypi.org/project/pycodestyle/) or [`flake8`](https://pypi.org/project/flake8/) modules (see links for installation).
+To check code against the [PEP8 style guidelines](https://www.python.org/dev/peps/pep-0008/#blank-lines) can use the [`pycodestyle`](https://pypi.org/project/pycodestyle/) or [`flake8`](https://pypi.org/project/flake8/) modules (see links for installation). More notes on PEP8 [here](https://realpython.com/python-pep8/).
 
 Check python script:
 ```Shell
@@ -116,4 +116,10 @@ pip install flake8 pycodestyle_magic
 %load_ext pycodestyle_magic
 %pycodestyle_on
 %pycodestyle_off
+```
+
+Use `black` to reformat python file to match PEP8:
+```Shell
+pip install black
+black messy_file.py
 ```
