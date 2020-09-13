@@ -34,6 +34,17 @@ def test_negative_input():
 ```
 The match is unnecessary if just want to catch any ValueError.
 
+## Test if approximately equal
+See [documentation](https://docs.pytest.org/en/latest/reference.html#pytest-approx)
+```python
+>>> 1 + 1e-8 == pytest.approx(1)
+True
+>>> 1 + 1e-8 == approx(1, abs=1e-12) # set absolute tolerance (default = 1e-12)
+False
+>>> 1 + 1e-8 == approx(1, rel=1e-6, abs=1e-12) # set relative and absolute tolerance (default = 1e-6, 1e-12)
+True
+```
+
 ## Fixtures
 
 Use fixtures to save, e.g., underlying test data that will be used in multiple tests:
