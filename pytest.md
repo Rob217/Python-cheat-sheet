@@ -85,3 +85,43 @@ pytest --markers # get list of available markers
 pytest -m 'slow' # just tests marked as 'slow'
 pytest -m 'not slow' # everything except tests marked as 'slow'
 ```
+
+## Parametrization: repeat test for multiple inputs
+
+Make a list of inputs for a given parameter:
+```python
+import pytest
+
+def is_positive(a):
+    if a > 0:
+        return True
+    else:
+        return False
+
+@pytest.mark.parametrize("positive_tests", [
+    2,
+    1e5,
+    5.3,
+])
+
+def test_is_positive(positive_tests):
+    assert is_positive(positive_tests)
+```
+
+Or for multiple input parameters:
+```python
+import pytest
+
+def add(a, b):
+    return a + b
+
+@pytest.mark.parametrize("add_tests", [
+    (3, 4, 7),
+    (-2, 3, 1),
+    (3.4, 2.1, 5.5),
+])
+
+def test_add(add_tests):
+    a, b, c = add_tests
+    assert add(a, b) == c
+```
