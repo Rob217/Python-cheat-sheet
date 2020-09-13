@@ -79,3 +79,9 @@ def test_subtract_slow():
 def test_substract():
     assert subtract(6, 2) == 4
 ```
+In the Shell:
+```Shell
+pytest --markers # get list of available markers
+pytest -m 'slow' # just tests marked as 'slow'
+pytest -m 'not slow' # everything except tests marked as 'slow'
+```
