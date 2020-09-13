@@ -125,3 +125,10 @@ def test_add(add_tests):
     a, b, c = add_tests
     assert add(a, b) == c
 ```
+
+## Finding slowest tests
+
+Find 3 slowest tests:
+```Shell
+pytest --durations=3
+```
