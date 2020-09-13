@@ -132,3 +132,11 @@ Find 3 slowest tests:
 ```Shell
 pytest --durations=3
 ```
+
+## Randomize test order
+
+Tests ideally should be stand alone and not depend on each other. To test whether this is the case, use (`pytest-randomly`)[https://github.com/pytest-dev/pytest-randomly]
+
+## Coverage
+
+To check how much of the python scripts are being tested, use the (`coverage`)[https://coverage.readthedocs.io/en/coverage-5.2.1/] package.
