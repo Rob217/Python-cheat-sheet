@@ -131,7 +131,6 @@ def is_positive(a):
     1e5,
     5.3,
 ])
-
 def test_is_positive(positive_tests):
     assert is_positive(positive_tests)
 ```
@@ -143,15 +142,34 @@ import pytest
 def add(a, b):
     return a + b
 
-@pytest.mark.parametrize("add_tests", [
+@pytest.mark.parametrize("a,b,output", [
     (3, 4, 7),
     (-2, 3, 1),
     (3.4, 2.1, 5.5),
 ])
+def test_add(a, b, output):
+    assert add(a, b) == output
+```
 
-def test_add(add_tests):
-    a, b, c = add_tests
-    assert add(a, b) == c
+To reuse paramaters, need to define them separately, e.g.,
+```python
+import pytest
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+test_data = [(3, 4), (-2, 3), (3.4, 2.1)]
+
+@pytest.mark.parametrize("a,b", test_data)
+def test_add(a, b):
+    assert add(a, b) == a + b
+
+@pytest.mark.parametrize("a,b", test_data)
+def test_subtract(a, b):
+    assert subtract(a, b) == a - b
 ```
 
 ## Finding slowest tests
