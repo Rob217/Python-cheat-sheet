@@ -14,8 +14,25 @@ def test_add():
 ```
 Then run 
 ```Shell
-pytest
+pytest # run all discovered tests
+pytest test.py # run specific test
+pytest test_dir/ # run all tests within directory
 ```
+
+## Catch expected exceptions
+```python
+import pytest
+
+def add_positive_numbers(a, b):
+    if (a < 0) or (b < 0):
+        raise ValueError('Inputs should not be negative')
+    return a + b
+
+def test_negative_input():
+    with pytest.raises(ValueError, match='Inputs should not be negative'):
+        add_positive_numbers(2, -1)
+```
+The match is unnecessary if just want to catch any ValueError.
 
 ## Fixtures
 
