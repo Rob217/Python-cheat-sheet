@@ -45,6 +45,13 @@ False
 True
 ```
 
+## Compare numpy arrays
+
+```python
+import numpy as np
+np.testing.assert_array_equal(arr_a, arr_b)
+```
+
 ## Fixtures
 
 Use fixtures to save, e.g., underlying test data that will be used in multiple tests:
