@@ -52,6 +52,13 @@ import numpy as np
 np.testing.assert_array_equal(arr_a, arr_b)
 ```
 
+## Turn warnings into errors
+
+See [docs](https://docs.pytest.org/en/stable/warnings.html).
+```Shell
+pytest -q test_show_warnings.py -W error
+```
+
 ## Fixtures
 
 Use fixtures to save, e.g., underlying test data that will be used in multiple tests:
