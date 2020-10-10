@@ -59,6 +59,12 @@ See [docs](https://docs.pytest.org/en/stable/warnings.html).
 pytest -q test_show_warnings.py -W error
 ```
 
+## Suppress warnings
+
+```Shell
+pytest -p no:warnings
+```
+
 ## Fixtures
 
 Use fixtures to save, e.g., underlying test data that will be used in multiple tests:
