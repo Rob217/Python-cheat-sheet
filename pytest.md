@@ -50,6 +50,7 @@ True
 ```python
 import numpy as np
 np.testing.assert_array_equal(arr_a, arr_b)
+np.testing.assert_array_almost_equal(arr_a, arr_b)
 ```
 
 ## Turn warnings into errors
