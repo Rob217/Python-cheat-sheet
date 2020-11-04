@@ -58,3 +58,6 @@ Use ```zorder``` to control which lines appear on top of which, with ```zorder <
 ax.plot(x, y, zorder = 10) # appears in front
 ax.plot(x, y, zorder = -5) # appears behind
 ```
+
+#### Shade between lines
+ax.fill_between(x, y1, y2)
