@@ -60,4 +60,6 @@ ax.plot(x, y, zorder = -5) # appears behind
 ```
 
 #### Shade between lines
+```python
 ax.fill_between(x, y1, y2)
+```
