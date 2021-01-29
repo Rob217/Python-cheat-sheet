@@ -19,6 +19,11 @@ pytest test.py # run specific test
 pytest test_dir/ # run all tests within directory
 ```
 
+## Print stdout
+```bash
+pytest -rA
+```
+
 ## Catch expected exceptions
 ```python
 import pytest
