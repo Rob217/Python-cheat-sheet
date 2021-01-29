@@ -4,6 +4,8 @@ Useful resources:
 - https://packaging.python.org/tutorials/installing-packages/
 - https://www.youtube.com/watch?v=N5vscPTWKOk
 
+See also [Conda pages](https://github.com/Rob217/Python-cheat-sheet/blob/master/Conda.md).
+
 Steps for creating and using a virtual environment:
 1. Create a directory in which your virtual environment is going to be stored, e.g., ```test_env_dir```
 ```bash
