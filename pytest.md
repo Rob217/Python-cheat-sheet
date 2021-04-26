@@ -212,3 +212,8 @@ Tests ideally should be stand alone and not depend on each other. To test whethe
 ## Coverage
 
 To check how much of the python scripts are being tested, use the [`coverage`](https://coverage.readthedocs.io/en/coverage-5.2.1/) package.
+
+E.g., the following command shows coverage for the module package_name.module_name and reports which lines are missing from coverage:
+```Shell
+pytest test/test_unit.py --cov=package_name.module_name --cov-report term-missing
+```
