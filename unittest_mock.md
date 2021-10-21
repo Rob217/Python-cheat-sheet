@@ -77,6 +77,18 @@ class TestFoo(unittest.TestCase):
     @patch('module.Foo.func', new=lambda *args, **kwargs: 456)
     def test_patch_function_with_func(self):
         self.assertEqual(module.Foo().func(), 456)
+    
+    @patch('module.Foo.func', new=Mock(side_effect=ValueError)
+    def test_raise_exception(self):
+        with self.assertRaises(ValueError):
+            module.Foo().func()
+            
+    @patch('module.Foo.func', new=Mock(side_effect=ValueError)
+    def test_does_not_raise_exception(self):
+        try:
+            module.Foo().func()
+        except Exception as e:
+            self.fail(f"module.Foo().func() unexpectedly raised an exception:\n{e}"
 
 
 if __name__ == "__main__":
