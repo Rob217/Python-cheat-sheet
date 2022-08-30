@@ -4,13 +4,13 @@
 import pandas as pd
 ```
 
-#### Load/save a dataframe from csv
+## Load/save a dataframe from csv
 ```python
 df = pd.read_csv('data.csv')
 df.to_csv('data.csv')
 ```
 
-#### Iterate through rows
+## Iterate through rows
 ```python
 >>> df = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
    a  b  c
@@ -29,7 +29,7 @@ df.to_csv('data.csv')
 7
 ```
 
-#### Add new column to dataframe
+## Add new column to dataframe
 ```python
 df['new_col'] = '' # empty column
 df['new_col'] = val # fill with some value
@@ -38,8 +38,15 @@ df.insert(loc, col_name, vals, allow_duplicates) # add a new column in location 
 ```
 `allow_duplicates` is a boolean which allows `col_name` to be the same as an already existing column name or not.
 
-#### Size of dataframe
+## Size of dataframe
 ```python
 df.shape # (2, 3)
 len(df.index) # number of rows
+```
+
+## MultiIndex
+If you have a MultiIndex, you can use `slice` to access different levels of that index (explained in more detail [here](https://towardsdatascience.com/accessing-data-in-a-multiindex-dataframe-in-pandas-569e8767201d)):
+```python
+df.loc[('index1', slice(None)), :]  # equivalent to df.loc[('index1', ), :] or df.loc['index1
+df.loc[(slice(None), 'index2'), :]
 ```
